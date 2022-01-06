@@ -13,14 +13,13 @@ function blurFunc(){
 }
 
 function validate(){
-  var username = document.getElementsByClassName('username').value;
-  var password = document.getElementsByClassName('password').value;
-  if(username==usename && password == password){
-    alert('You are successfully logged in');
-
-  }
-  else {
-    alert("Login was unsuccessful, please check your username and password");
+  var username=document.loginForm.username.value;
+  var password = document.loginForm.password.value;
+  if(username==null || username==""){
+    alert("Username is a required field");
+    return false;
+  }else if(password.length<6){
+    alert("Password must contain atleast 6 characters")
     return false;
   }
 }
