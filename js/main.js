@@ -19,9 +19,13 @@ function validate(){
     alert("Username is a required field");
     return false;
   }else if(password.length<6){
-    alert("Password must contain atleast 6 characters")
+    alert("Password must contain atleast 6 characters");
     return false;
+  }else{
+    alert("You had successfully logged in!!!");
+    return true;
   }
+    
 }
 
 
